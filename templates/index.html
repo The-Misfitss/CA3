@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask App Results</title>
+  </head>
+  <body>
+    <h1>Flask App Results</h1>
+
+    <p>The result is: {{ result }}</p>
+
+    <form action="/results" method="POST">
+      <input type="number" name="input1" placeholder="Input 1" />
+      <input type="number" name="input2" placeholder="Input 2" />
+
+      //Make a dropdown with 3 options +,*,/
+      <select name="operator">
+        <option value="add">+</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+      </select>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
