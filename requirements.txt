@@ -1,4 +1,4 @@
 flake8
 pytest
 pytest-cov
-flask=2.01
+flask
