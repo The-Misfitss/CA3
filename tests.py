@@ -14,3 +14,5 @@ def test_add():
 def test_divide():
     assert 2 == divide(4, 2)
 
+def test_divide_again():
+    assert 1 != divide(4, 2)
