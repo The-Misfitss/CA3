@@ -8,3 +8,4 @@ def test_add():
 
 def test_divide():
     assert 2 == divide(4, 2)
+
