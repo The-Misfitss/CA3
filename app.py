@@ -4,6 +4,8 @@ from functions import add
 
 from functions import multiply
 
+from functions import divide
+
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -25,6 +27,15 @@ def add_route(num1, num2):
     num2 = int(num2)
 
     result = multiply(num1, num2)
+
+    return f'{result}'
+
+@app.route('/calc/divide/<int:num1>/<int:num2>', methods=['GET'])
+def add_route(num1, num2):
+    num1 = int(num1)
+    num2 = int(num2)
+
+    result = divide(num1, num2)
 
     return f'{result}'
 
