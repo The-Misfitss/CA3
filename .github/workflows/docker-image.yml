@@ -23,5 +23,5 @@ jobs:
       run: docker build . --file Dockerfile --tag ca3:latest
     - name: Push Docker image
       run: |
-          docker tag ca3:latest jawwadhabib/mlopsclass:ca3
-          docker push jawwadhabib/mlopsclass:ca3
+          docker tag ca3:latest jawwadhabib/ca3
+          docker push jawwadhabib/ca3
