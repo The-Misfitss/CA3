@@ -1,0 +1,3 @@
+Hammad Habib (i200864) -> Scaffolded, Added functions to i200864 branch and merged the branch, Created workflows.
+Mahnoor Akhtar (i200635) -> Added functions to i200635 branch and merged the branch, created the flask app structure
+Adbullah Cheema (i200468) -> Added functions to i200468 branch and merged the branch, tested the final docker image.
