@@ -33,7 +33,7 @@ pipeline{
             when{
                 expression{
                     // BRANCH_NAME is always provided in the environment variable provided by jenkins
-                    BRANCH_NAME === 'master' //Only if the current branch is master let's say
+                    BRANCH_NAME == 'master' //Only if the current branch is master let's say
                 }
             }
             steps{
