@@ -52,7 +52,7 @@ pipeline{
                 ]){
                     //Now here in this block I can use USER and PASSWORD
 
-                    sh "some Script ${USER} ${PASSWORD}" // SH is a sample script
+                    sh "echo ${USER} ${PASSWORD}" // SH is a sample script
                 }
 
             }
