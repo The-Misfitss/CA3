@@ -19,7 +19,7 @@ pipeline{
         stage("build"){
             when{
                 expression{
-                    env.BRANCH_NAME == 'master' && env.CODE_CHANGE == true //Run only if the current branch is master and any changes have been made in the code
+                    BRANCH_NAME == 'master'  //Run only if the current branch is master and any changes have been made in the code
                 }
             }
             steps{
@@ -33,7 +33,7 @@ pipeline{
             when{
                 expression{
                     // BRANCH_NAME is always provided in the environment variable provided by jenkins
-                    env.BRANCH_NAME === 'master' //Only if the current branch is master let's say
+                    BRANCH_NAME == 'master' //Only if the current branch is master let's say
                 }
             }
             steps{
