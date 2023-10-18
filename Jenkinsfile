@@ -19,7 +19,7 @@ pipeline{
         stage("build"){
             when{
                 expression{
-                    BRANCH_NAME == 'master' && CODE_CHANGE == true //Run only if the current branch is master and any changes have been made in the code
+                    BRANCH_NAME == 'master' //Run only if the current branch is master and any changes have been made in the code
                 }
             }
             steps{
