@@ -53,15 +53,19 @@ pipeline{
     //After all the stages are done we can define the post stages. Which will be executed after all of the stages have been executed.
     post{
         always{
+            echo "This will be executed alway, like sending emails etc"
             //This will be executed alway, like sending emails etc
         }
         success{
+            echo "Will execute in case of success"
             //Will execute in case of success
         }
         failure{
+            echo "Will execute in case of failure"
             //Will execute in case of failure
         }
         unstable{
+            echo "Will execute in case the build was unstable"
             //Will execute in case the build was unstable
         }
     }
