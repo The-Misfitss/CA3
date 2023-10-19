@@ -52,7 +52,8 @@ pipeline{
                 ]){
                     //Now here in this block I can use USER and PASSWORD
 
-                    sh "echo ${USER} ${PASSWORD}" // SH is a sample script
+                    echo "Server Credentials -> SERVER_CREDENTIALS"
+                    echo "${USER} ${PASSWORD}" // SH is a sample script
                 }
 
             }
