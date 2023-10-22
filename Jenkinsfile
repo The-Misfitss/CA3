@@ -47,7 +47,7 @@ pipeline{
                 echo "deploying with ${SERVER_CREDENTIALS}"
                 //We can use the following function named as withCredentials that takes as a parameter an object [] <-- (This is an object syntax in groovy). This object will be usernamePassword() -> Now this is a function that lets me get the username and the password individually
                 withCredentials([
-                    usernamePassword(credentials:'jenkins-tut',usernameVariable:'USER',passwordVariable:'PASSWORD') //Using the usernamePassword function because the type of credentials we created on jenkins was of this type.. 
+                    usernamePassword(credentialsId:'jenkins-tut',usernameVariable:'USER',passwordVariable:'PASSWORD') //Using the usernamePassword function because the type of credentials we created on jenkins was of this type.. 
                     //After that we are simply storing the username ins the variable USER and the password in the varibale PASSWORD
                 ]){
                     //Now here in this block I can use USER and PASSWORD
