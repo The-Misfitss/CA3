@@ -10,10 +10,10 @@ In this File following Jenkinsfile concepts have been discussed.
 
 pipeline{
     agent any
-    parameters{
-        string(name:'VERSION',defaultValue:'1.0', description:'...')
-        choice(name:'Blah', choices = ['1', '2', '3'],description='...')
-        booleanParam(name:'TEST', defaultValue=true, description='...')
+    parameters {
+        string(name: 'VERSION', defaultValue: '1.0', description: '...')
+        choice(name: 'Blah', choices: ['1', '2', '3'], description: '...')
+        booleanParam(name: 'TEST', defaultValue: true, description: '...')
     }
     environment{
         VERSION = '1.3'
