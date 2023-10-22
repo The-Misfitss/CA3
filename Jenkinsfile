@@ -60,6 +60,13 @@ pipeline{
 
                     //echo "Server Credentials -> ${SERVER_CREDENTIALS}"
                     echo "${USER} ${PASSWORD}"
+
+                    script{
+                    gv = load "helper.groovy" //Here we are loading the helper.groovy file and storing it in the gv variable
+                    gv.deployit() //Here we are calling the deployit function from the helper.groovy file
+
+                    //gv loaded once can be used anywhere in the jenkinsfile,
+                }
                 }
 
             }
