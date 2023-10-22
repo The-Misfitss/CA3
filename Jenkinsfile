@@ -10,6 +10,11 @@ In this File following Jenkinsfile concepts have been discussed.
 
 pipeline{
     agent any
+    parameter{
+        string(name:'VERSION',defaultValue:'1.0', description:'...')
+        choice(name:'Blah', choices = ['1', '2', '3'],description='...')
+        booleanParam(name:'Deploy', defaultValue=true, description='...')
+    }
     environment{
         VERSION = '1.3'
         SERVER_CREDENTIALS = credentials('jenkins-tut')
