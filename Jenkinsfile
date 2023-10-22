@@ -10,10 +10,10 @@ In this File following Jenkinsfile concepts have been discussed.
 
 pipeline{
     agent any
-    parameter{
+    parameters{
         string(name:'VERSION',defaultValue:'1.0', description:'...')
         choice(name:'Blah', choices = ['1', '2', '3'],description='...')
-        booleanParam(name:'Deploy', defaultValue=true, description='...')
+        booleanParam(name:'TEST', defaultValue=true, description='...')
     }
     environment{
         VERSION = '1.3'
@@ -39,6 +39,7 @@ pipeline{
                 expression{
                     // BRANCH_NAME is always provided in the environment variable provided by jenkins
                     BRANCH_NAME == 'master' //Only if the current branch is master let's say
+                    params.TEST = true
                 }
             }
             steps{
